@@ -8,7 +8,7 @@ import {
 } from "typeorm";
 
 @Entity("users")
-class User {
+export class User {
   @PrimaryGeneratedColumn("uuid")
   id: number;
 
@@ -21,7 +21,7 @@ class User {
   @Column()
   password: string;
 
-  @Column()
+  @Column({ type: "json", nullable: true })
   phone: { number: string; ddd: string };
 
   @CreateDateColumn({ type: "date" })

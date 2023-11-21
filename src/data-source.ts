@@ -1,5 +1,6 @@
 import path from "node:path";
 import { DataSource, DataSourceOptions } from "typeorm";
+import "dotenv/config";
 
 const DataSourceConfig = (): DataSourceOptions => {
   const entitiesPath = path.join(__dirname, "entities/**.{js,ts}");

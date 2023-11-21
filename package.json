@@ -1,6 +1,8 @@
 {
   "scripts": {
-    "dev": "ts-node-dev --cls --rs --ignore-watch node_modules src/server.ts",
+    "dev": "ts-node-dev --rs --cls --ignore-watch node_modules src/server.ts",
+    "typeorm": "typeorm-ts-node-commonjs",
+    "test": "cross-env NODE_ENV=test SECRET_KEY=secret_key jest --verbose --runInBand",
     "migration:generate": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:generate ./src/migrations/default",
     "migration:run": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:run",
     "migration:revert": "typeorm-ts-node-commonjs -d ./src/data-source.ts migration:revert"
@@ -20,6 +22,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.5",
-    "@types/pg": "^8.10.9"
+    "@types/pg": "^8.10.9",
+    "ts-node": "^10.9.1"
   }
 }
