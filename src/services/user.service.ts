@@ -17,6 +17,8 @@ const createUser = async (payload: TUserPayload) => {
   } else {
     const newUser = userRepo.create(payload);
     await userRepo.save(newUser);
+
+    return newUser;
   }
 };
 
