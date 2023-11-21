@@ -38,4 +38,8 @@ const login = async (req: Request, res: Response) => {
   return res.status(200).json({ ...parsedUser, token });
 };
 
-export default { create, login };
+const retrieveUserInfo = async (req: Request, res: Response) => {
+  return res.json(res.locals.decoded);
+};
+
+export default { create, login, retrieveUserInfo };

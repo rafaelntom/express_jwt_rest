@@ -55,7 +55,7 @@ const userLogin = async (payload: TLoginPayload) => {
     },
     String(process.env.SECRET_KEY),
     {
-      expiresIn: "1d",
+      expiresIn: "30m",
       subject: String(currentUser.id),
     }
   );
