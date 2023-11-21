@@ -15,7 +15,8 @@
     "strictPropertyInitialization": false
   },
   "include": [
-    "src"
+    "src",
+    "1700570349247-default.ts"
   ],
   "exclude": [
     "node_modules"
